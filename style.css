@@ -1,0 +1,49 @@
+@media (max-width:319px) {
+	.greeting {
+		font-size: 14px;
+	}
+}
+
+@media (min-width:320px) {
+	.greeting {
+		font-size: 18px;
+	}
+}
+
+@media (min-width:481px) {
+	.greeting {
+		font-size: 28px;
+	}
+}
+
+@media (min-width:641px) {
+	.greeting {
+		font-size: 28px;
+	}
+}
+
+@media (min-width:961px) {
+	.greeting {
+		font-size: 56px;
+	}
+}
+
+@media (min-width:1025px) {
+	.greeting {
+		font-size: 60px;
+	}
+}
+
+@media (min-width:1281px) {
+	.greeting {
+		font-size: 75px;
+	}
+}
+
+.greeting {
+	text-align: center;
+}
+
+.smile {
+	color: gold;
+}
