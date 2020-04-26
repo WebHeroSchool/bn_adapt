@@ -1,49 +1,151 @@
-@media (max-width:319px) {
-	.greeting {
-		font-size: 14px;
-	}
+html, body, .wrap {
+	height: 100%;
+	overflow: hidden;
 }
 
-@media (min-width:320px) {
-	.greeting {
-		font-size: 18px;
-	}
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+	box-shadow: 0 0 5px gray;
 }
 
-@media (min-width:481px) {
-	.greeting {
-		font-size: 28px;
-	}
+.menu {
+	overflow: hidden;
+	visibility: hidden;
+	width: 100%;
+	max-height: 0;
+	padding: 1rem 0;
+	transition: max-height 2s ease-out;
+	font-family: sans-serif;
+	text-transform: uppercase;
 }
 
-@media (min-width:641px) {
-	.greeting {
-		font-size: 28px;
-	}
+.nav-item {
+	display: block;
+	padding: .6rem 0;
+	text-decoration: none;
+	color: white;
 }
 
-@media (min-width:961px) {
-	.greeting {
-		font-size: 56px;
-	}
+.icon {
+	float: left;
+	display: inline-block;
+	height: 0;
+	cursor: pointer;
+	padding: 1.4rem 1rem;
+	user-select: none;
 }
 
-@media (min-width:1025px) {
-	.greeting {
-		font-size: 60px;
-	}
+.navicon {
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 2px;
+	background: white;
+	border-radius: 1px;
+	transition: background .3s ease-out;
+	user-select: none;
+}
+.navicon:before,
+.navicon:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: white;
+	border-radius: 1px;
+	transition: all .3s ease-out;
+	transition-property: background, transform;
+}
+.navicon:before { top: 300%; }
+.navicon:after { top: -300%; }
+
+#toggle { display: none; }
+
+#toggle:checked ~ .menu {
+	visibility: visible;
+	max-height: none;
 }
 
-@media (min-width:1281px) {
-	.greeting {
-		font-size: 75px;
+#toggle:checked ~ .icon .navicon { background: transparent; }
+#toggle:checked ~ .icon .navicon:before { transform: rotate(45deg); }
+#toggle:checked ~ .icon .navicon:after { transform: rotate(-45deg); }
+#toggle:checked ~ .icon:not(.steps) .navicon:before,
+#toggle:checked ~ .icon:not(.steps) .navicon:after { top: 0; }
+
+@media screen and (min-width: 481px) {
+	.menu {
+		visibility: visible;
+		display: flex;
+		justify-content: space-around;
+		max-height: none;
 	}
+	.nav-item {
+		padding: 0;
+		display: inline-block;
+	}
+	.icon { display: none; }
 }
 
-.greeting {
+.wrap {
+	position: relative;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 }
 
-.smile {
-	color: gold;
+.greeting {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+.smile-red { color: red; }
+.smile-orange { color: orange; }
+.smile-yellow { color: gold; }
+.smile-green { color: green; }
+.smile-skyblue { color: skyblue; }
+.smile-blue { color: blue; }
+.smile-purple { color: purple; }
+
+@media (max-width:319px) {
+	.greeting { font-size: 14px; }
+	.nav-item { font-size: 12px; }
+	.nav { background: linear-gradient(to right, firebrick, gold, deepskyblue, purple); }
+}
+@media (min-width:320px) {
+	.greeting { font-size: 18px; }
+	.nav-item { font-size: 14px; }
+	.nav { background: linear-gradient(to right, firebrick, gold, deepskyblue, purple); }
+}
+@media (min-width:481px) {
+	.greeting { font-size: 28px; }
+	.nav-item { font-size: 12px; }
+	.nav { background: linear-gradient(to right, firebrick, gold, deepskyblue, purple); }
+}
+@media (min-width:641px) {
+	.greeting { font-size: 34px; }
+	.nav-item { font-size: 14px; }
+	.nav { background: linear-gradient(to right, firebrick, darkorange, gold, forestgreen, deepskyblue, blue, purple); }
+}
+@media (min-width:961px) {
+	.greeting { font-size: 56px; }
+	.nav-item { font-size: 18px; }
+	.nav { background: linear-gradient(to right, firebrick, darkorange, gold, forestgreen, deepskyblue, blue, purple); }
+}
+@media (min-width:1025px) {
+	.greeting { font-size: 60px; }
+	.nav-item { font-size: 20px; }
+	.nav { background: linear-gradient(to right, firebrick, darkorange, gold, forestgreen, deepskyblue, blue, purple); }
+}
+@media (min-width:1281px) {
+	.greeting { font-size: 75px; }
+	.nav-item { font-size: 22px; }
+	.nav { background: linear-gradient(to right, firebrick, darkorange, gold, forestgreen, deepskyblue, blue, purple); }
 }
