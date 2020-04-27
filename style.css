@@ -32,7 +32,6 @@ html, body, .wrap {
 }
 
 .icon {
-	float: left;
 	display: inline-block;
 	height: 0;
 	cursor: pointer;
