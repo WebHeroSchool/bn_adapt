@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Адаптивная верстка</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body class="body">
+	<header class="nav">
+		<input id="toggle" type="checkbox"/>
+		<label class="icon" for="toggle"><span class="navicon"></span></label>
+		<nav class="menu">
+			<a class="nav-item" href="#red" onclick="toggle.checked = false;">Красный</a>
+			<a class="nav-item" href="#orange" onclick="toggle.checked = false;">Оранжевый</a>
+			<a class="nav-item" href="#yellow" onclick="toggle.checked = false;">Желтый</a>
+			<a class="nav-item" href="#green" onclick="toggle.checked = false;">Зеленый</a>
+			<a class="nav-item" href="#sky" onclick="toggle.checked = false;">Голубой</a>
+			<a class="nav-item" href="#blue" onclick="toggle.checked = false;">Синий</a>
+			<a class="nav-item" href="#purple" onclick="toggle.checked = false;">Фиолетовый</a>
+		</nav>
+	</header>
+	<div id="red" class="wrap"><p class="greeting">Привет! <span class="smile-red">☺</span></p></div>
+	<div id="orange" class="wrap"><p class="greeting">Привет! <span class="smile-orange">☺</span></p></div>
+	<div id="yellow" class="wrap"><p class="greeting">Привет! <span class="smile-yellow">☺</span></p></div>
+	<div id="green" class="wrap"><p class="greeting">Привет! <span class="smile-green">☺</span></p></div>
+	<div id="sky" class="wrap"><p class="greeting">Привет! <span class="smile-skyblue">☺</span></p></div>
+	<div id="blue" class="wrap"><p class="greeting">Привет! <span class="smile-blue">☺</span></p></div>
+	<div id="purple" class="wrap"><p class="greeting">Привет! <span class="smile-purple">☺</span></p></div>
+</body>
+</html>
